@@ -7,7 +7,7 @@
  */
 import { Command } from 'commander';
 import { yellow } from 'chalk';
-import { createApp } from './lib/create';
+import { createApp } from './bin/create';
 const program = new Command();
 program.version('0.0.1');
 program.command('create <app-name>').description('正在使用qt创建一个新的项目')

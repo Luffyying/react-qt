@@ -7,20 +7,30 @@
  */
 import { Command } from 'commander';
 import { yellow } from 'chalk';
-import { createApp } from './bin/create';
+import { createApp } from './lib/create';
 const program = new Command();
 program.version('0.0.1');
 program.command('create <app-name>').description('正在使用qt创建一个新的项目')
+// .option('-t, --type [code-snippet]', '创建项目使用的模版类型')
 .action((name, cmd) => {
     // const options = cleanArgs(cmd);
     // 对于参数的控制边界
     console.log('cmd', cmd);
-    console.log('name', name);
+    console.log('name', name);// test-project
     console.log('argv', process.argv);
+    /*
+    argv [
+        '/usr/local/Cellar/node/12.8.0/bin/node',
+        '/usr/local/bin/qts', // 前两个固定，后面依旧空格分别是输入的内容
+        'create',
+        'test-project'
+        ]
+     */
     if (process.argv.length) {
         console.log(
             yellow("\n Info: haha"),
         );
     }
-    createApp();
+    createApp(name);
 })
+program.parse(process.argv);

@@ -1,12 +1,12 @@
 {
-  "name": "react-qt",
+  "name": "react-qt2",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:Luffyying/react-qt.git",
   "author": "wangwanying <wangwanying@didiglobal.com>",
   "license": "MIT",
   "bin": {
-    "qt": "./dist/index.js"
+    "qts": "bin/index.js"
   },
   "scripts": {
     "build": "npx tsc"
